@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daily Todo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="todo-app">
+      <header class="page-header">
+        <p class="eyebrow">YOUR DAILY LIST</p>
+        <h1 id="today"></h1>
+      </header>
+
+      <form class="add-form" id="add-form">
+        <label class="visually-hidden" for="task-input">Add a task</label>
+        <input
+          id="task-input"
+          name="task"
+          type="text"
+          placeholder="What needs doing?"
+          autocomplete="off"
+          maxlength="240"
+        >
+        <button class="add-button" type="submit" aria-label="Add task">+</button>
+      </form>
+
+      <section class="list-section" aria-label="Today's tasks">
+        <ul class="task-list" id="task-list"></ul>
+        <p class="empty-state" id="empty-state" hidden>Nothing to do today</p>
+      </section>
+
+      <footer class="list-footer">
+        <p id="remaining-count" aria-live="polite"></p>
+        <button class="clear-button" id="clear-completed" type="button">Clear completed</button>
+      </footer>
+    </main>
+  </body>
+</html>
